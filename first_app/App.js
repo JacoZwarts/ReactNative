@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen  from "./src/screens/HomeScreen";
 import DetailsScreen from "./src/screens/DetailsComponent";
+import ListScreen from './src/screens/ListScreen';
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
         <Stack.Screen name="Details" > 
         {(props) => <DetailsScreen {...props}/>}
         </Stack.Screen>
+        <Stack.Screen name="List" component={ListScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
