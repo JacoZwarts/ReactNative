@@ -7,7 +7,7 @@ const reducer = (state, action) => {
     case "counter_increase":
       return { ...state, counter: state.counter + action.payload };
     case "counter_decrease":
-      return { ...state, counter: state.counter + action.payload };
+      return { ...state, counter: state.counter - action.payload };
     default:
       return state;
   }
@@ -28,7 +28,7 @@ const CounterScreen = ({ navigation }) => {
         onPress={() =>
           dispatch({
             type: "counter_decrease",
-            payload: -1 * COUNTER_INCREMENT,
+            payload:  COUNTER_INCREMENT,
           })
         }
       />

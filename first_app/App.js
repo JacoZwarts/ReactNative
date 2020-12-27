@@ -1,16 +1,14 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen  from "./src/screens/HomeScreen";
+import HomeScreen from "./src/screens/HomeScreen";
 import DetailsScreen from "./src/screens/DetailsComponent";
-import ListScreen from './src/screens/ListScreen';
-import ImageScreen from './src/screens/ImageScreen';
-import CounterScreen from './src/screens/CounterScreen';
-import ColourScreen from './src/screens/ColourScreen';
-import SquareScreen from './src/screens/SquareScreen';
-
-
-
+import ListScreen from "./src/screens/ListScreen";
+import ImageScreen from "./src/screens/ImageScreen";
+import CounterScreen from "./src/screens/CounterScreen";
+import ColourScreen from "./src/screens/ColourScreen";
+import SquareScreen from "./src/screens/SquareScreen";
+import TextScreen from "./src/screens/TextScreen";
 
 const Stack = createStackNavigator();
 
@@ -21,14 +19,15 @@ const App = () => {
         <Stack.Screen name="Home">
           {(props) => <HomeScreen {...props} />}
         </Stack.Screen>
-        <Stack.Screen name="Details" > 
-        {(props) => <DetailsScreen {...props}/>}
+        <Stack.Screen name="Details">
+          {(props) => <DetailsScreen {...props} />}
         </Stack.Screen>
-        <Stack.Screen name="List" component={ListScreen}/>
-        <Stack.Screen name="Image Screen" component={ImageScreen}/>
-        <Stack.Screen name="Counter Screen" component={CounterScreen}/>
-        <Stack.Screen name="Colour Screen" component={ColourScreen}/>
-        <Stack.Screen name="Square Screen" component={SquareScreen}/>
+        <Stack.Screen name="List" component={ListScreen} />
+        <Stack.Screen name="Image Screen" component={ImageScreen} />
+        <Stack.Screen name="Counter Screen" component={CounterScreen} />
+        <Stack.Screen name="Colour Screen" component={ColourScreen} />
+        <Stack.Screen name="Square Screen" component={SquareScreen} />
+        <Stack.Screen name="Text Screen" component={TextScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
